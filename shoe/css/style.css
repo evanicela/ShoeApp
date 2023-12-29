@@ -1,0 +1,87 @@
+
+body
+{
+    font:20px/1.4 Verdana,Arial;
+    background:#eee;
+    height:50%;
+    margin:5px 0;
+    padding:0
+}
+h1
+{
+    font:24px
+    Georgia,Verdana;
+    margin:0
+}
+h2
+{
+    font-size:12px;
+    font-weight:normal;
+    font-style:italic;
+    margin:0 0 20px
+}
+h3
+{
+    font-size:12px;
+    font-weight:normal;
+    font-style:italic;
+    margin:0 0 0px
+}
+p {
+    margin-top:0
+}
+ul
+{
+    margin:0;
+    padding-left:10px
+}
+
+#form-group
+{
+    width:100px;
+    margin:0 auto;
+    border:1px solid #ccc;
+    padding:2px 5px;
+    background:#fff
+}
+
+.tinbox
+{
+    position:absolute;
+    display:none;
+    padding:10px;
+    background:#fff;
+url(images/preload.gif) no-repeat 50% 50%;
+    border:10px solid #e3e3e3;
+    z-index:1000
+}
+.tinymask {
+    position:absolute;
+    display:none;
+    top:0;
+    left:0;
+    height:10%;
+    width:10%;
+    background:#000;
+    z-index:500
+}
+#tinycontent {
+    background:#fff
+}
+form {
+    max-width: 50px;
+
+    background: #f4f7f8;
+    border-radius: 8px;
+}
+.container {
+    font:14px Georgia,Verdana;
+
+
+    border:1px solid #ccc;
+    background:#eee;
+    cursor:pointer}
+.button:hover {
+    border:1px solid #bbb;
+    background:#e3e3e3
+}

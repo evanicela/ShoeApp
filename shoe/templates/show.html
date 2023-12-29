@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shoes Records</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+</head>
+<body>
+<table class="table table-striped table-bordered table-sm">
+    <thead class="bg-primary">
+    <tr>
+        <th>Shoe ID</th>
+        <th>Shoe Name</th>
+        <th>Shoe Image</th>
+        <th>Shoe Price</th>
+        <th>Shoe Description</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    {% for shoe in shoes %}
+        <tr>
+            <td>{{ shoe.id }}</td>
+            <td>{{ shoe.shoe_name }}</td>
+            <td> <img src="{{ shoe.shoe_image }}" width="300"></td>
+            <td>{{ shoe.shoe_price }}</td>
+            <td>{{ shoe.shoe_description }}</td>
+            <td>
+                <a href="/edit/{{ shoe.id }}"><span class="btn btn-danger" >Edit</span></a>
+               <a href="/delete/{{ shoe.id }}"><span class="btn btn-danger" >delete</span></a>
+                <a href="/checkout/{{ shoe.id }}" class="btn btn-success"> Checkout </a>
+            </td>
+        </tr>
+        <br>
+    {% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+<center><a href="/shoe" class="btn btn-primary">Add New Shoe</a></center>
+</body>
+</html>
